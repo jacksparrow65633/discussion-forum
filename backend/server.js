@@ -51,7 +51,8 @@ app.use("/api/ai", aiRoutes);
 
 
 // Serve uploads folder
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+const uploadsPath = path.join(__dirname, "uploads");
+app.use("/uploads", express.static(uploadsPath));
 
 
 // Start server
